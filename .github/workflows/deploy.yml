@@ -23,10 +23,9 @@ jobs:
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
-          key: |
-            ${{ secrets.EC2_SSH_KEY }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            docker pull m${{ secrets.DOCKER_USERNAME }}/pip:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/pip:latest
             docker stop pip || true
             docker rm pip || true
             docker run -d -p 3000:3000 --name pip ${{ secrets.DOCKER_USERNAME }}/pip:latest
