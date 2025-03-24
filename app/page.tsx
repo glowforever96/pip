@@ -1,3 +1,7 @@
 export default function Home() {
-  return <div>home 화면 dd d</div>;
+  return (
+    <div>
+      <h1>안녕하세요 next.js 앱입니다.</h1>
+    </div>
+  );
 }
