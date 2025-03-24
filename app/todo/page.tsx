@@ -13,7 +13,7 @@ export default async function Page() {
         <div key={id}>
           <h2>{userId}</h2>
           <h3>{title}</h3>
-          <div>{completed ? "done" : "not do"}</div>
+          <div>{completed ? "했음" : "안헀음"}</div>
         </div>
       ))}
     </h1>
